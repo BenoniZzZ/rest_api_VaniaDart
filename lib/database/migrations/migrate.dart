@@ -4,6 +4,8 @@ import 'create_products_table.dart';
 import 'create_orders_table.dart';
 import 'create_orderitems_table.dart';
 import 'create_productnotes_table.dart';
+import 'create_users_table.dart';
+
 
 Future<void> runMigrations() async {
   print('Migrating customers table...');
@@ -23,6 +25,9 @@ Future<void> runMigrations() async {
 
   print('Migrating productnotes table...');
   await createProductNotesTable();
+
+  print('Migrating users table...');
+  await createUsersTable();
 
   print('Migrations completed successfully.');
 }

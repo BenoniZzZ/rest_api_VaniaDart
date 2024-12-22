@@ -1,6 +1,6 @@
 import 'package:shelf/shelf.dart';
 import 'package:shelf/shelf_io.dart';
-import 'package:dotenv/dotenv.dart'; // Impor pustaka dotenv
+import 'package:dotenv/dotenv.dart'; 
 import 'package:ben_api/route/api_route.dart';
 import 'package:ben_api/database/migrations/migrate.dart';
 
@@ -20,7 +20,7 @@ void main() async {
   final server = await serve(
     handler,
     'localhost',
-    int.parse(dotenv['APP_PORT'] ?? '8000'), // Gunakan instance dotenv untuk mengakses variabel
+    int.parse(dotenv['APP_PORT'] ?? '8000'), 
   );
   print('Server running at http://localhost:${server.port}');
 }

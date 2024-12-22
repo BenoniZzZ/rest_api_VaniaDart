@@ -5,6 +5,8 @@ import '../app/http/controllers/orderitems_controller.dart';
 import '../app/http/controllers/vendors_controller.dart';
 import '../app/http/controllers/products_controller.dart';
 import '../app/http/controllers/productnotes_controller.dart';
+import '../app/http/controllers/auth_controller.dart';
+
 
 Router apiRouter() {
   final router = Router();
@@ -44,6 +46,10 @@ Router apiRouter() {
   router.post('/productnotes', ProductNotesController.create);
   router.put('/productnotes/<id>', ProductNotesController.update);
   router.delete('/productnotes/<id>', ProductNotesController.delete);
+
+  //auth
+  router.post('/register', AuthController.register);
+  router.post('/login', AuthController.login);
 
   return router;
 }
